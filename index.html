@@ -8,6 +8,9 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS External -->
+     <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -20,7 +23,7 @@
     <main>
         <!-- Introduction -->
         <section>
-            <!-- Dummy Intro -->
+            <!-- Intro -->
             <p>Masukkan suhu derajat Celsius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>
         </section>
 
@@ -34,11 +37,11 @@
                 <textarea id="konversi-input"></textarea>
             </div>
 
-            <!-- Form Action -->
+            <!-- Tombol -->
             <div class="section-item">
-                <button class="bg-1">Konversi</button>
-                <button class="bg-2">Reset</button>
-                <button class="bg-3">Reverse</button>
+                <button type="button" onclick="konversi()" class="bg-1">Konversi</button>
+                <button type="button" onclick="reset()" class="bg-2">Reset</button>
+                <button type="button" onclick="tukar()" class="bg-3">Tukar</button>
             </div>
         </form>
 
