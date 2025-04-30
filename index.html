@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Konversi Suhu - Sammy</title>
-
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- JS External -->
-     <script src="js/script.js"></script>
 </head>
-
 <body>
     <!-- Header Content -->
     <header>
@@ -30,40 +24,37 @@
         <!-- Form Konversi Suhu -->
         <form class="section-content">
             <div class="section-item">
-                <label for="konversi-input">Celcius (&deg;C):</label>
+                <label for="inputBox" id="inputLabel">Celcius (&deg;C):</label>
             </div>
-
             <div class="section-item">
-                <textarea id="konversi-input"></textarea>
+                <textarea id="inputBox"></textarea>
             </div>
 
             <!-- Tombol -->
             <div class="section-item">
                 <button type="button" onclick="konversi()" class="bg-1">Konversi</button>
-                <button type="button" onclick="reset()" class="bg-2">Reset</button>
+                <button type="button" onclick="rst()" class="bg-2">Reset</button>
                 <button type="button" onclick="tukar()" class="bg-3">Tukar</button>
             </div>
         </form>
 
         <!-- Hasil Konversi Suhu -->
-        <section class="section-content">
-            <div class="section-item">
-                <label for="result-input">Fahrenheit (&deg;F):</label>
-            </div>
-
-            <div class="section-item">
-                <textarea id="result-input" readonly></textarea>
-            </div>
+        <div class="section-item">
+            <label for="resultBox" id="resultLabel">Fahrenheit (&deg;F):</label>
+        </div>
+        <div class="section-item">
+            <textarea id="resultBox" readonly></textarea>
+        </div>
         </section>
 
         <!-- Penjelasan -->
         <section class="section-content">
             <div class="section-item">
-                <label for="calculate-detail">Cara Kalkulasi:</label>
+                <label for="detail">Cara Kalkulasi:</label>
             </div>
 
             <div class="section-item">
-                <textarea id="calculate-detail" readonly></textarea>
+                <textarea id="detail" readonly></textarea>
             </div>
         </section>
 
@@ -98,5 +89,6 @@
         <p>&copy; 2025 Sammy. All rights reserved.</p>
     </footer>
 </body>
-
+<!-- JS External -->
+<script src="js/script.js"></script>
 </html>
