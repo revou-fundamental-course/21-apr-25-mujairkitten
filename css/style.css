@@ -5,14 +5,16 @@ body {
   align-items: center;
   justify-content: center;
   background: hsl(36, 57%, 13%);
+  font: 16px "Comfortaa";
+  color: white;
 }
 
 .grid {
   width: 100%;
-  max-width: 97vw;
-  height: 48vw;
+  max-width: 95vw;
+  height: 95vh;
   display: grid;
-  gap: 1.5vw;
+  gap: 1vw;
   padding: 1vw;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
@@ -30,8 +32,9 @@ body {
 }
 
 .item {
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 12px;
+  padding: 1vh 1vw;
 }
 
 .grid .item:nth-child(1) {
@@ -67,4 +70,36 @@ textarea {
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+}
+
+.formula {
+    font-size: x-large;
+    font-family: Cambria Math;
+}
+
+.s {
+   font-style: italic;
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+    max-width: 85vw;
+    height: 90vh;
+    gap: 3vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "hero"
+    "hero"
+    "hero"
+    "aside2"
+    "aside2"
+    "aside2"
+    "aside3"
+    "aside3"
+    "aside3"
+    "aside4"
+    "aside4"
+    "aside4"
+    "navbar";
+  }
 }
