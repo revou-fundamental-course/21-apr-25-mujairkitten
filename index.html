@@ -13,10 +13,12 @@
 </head>
 <body>
     <div class="grid">
-      <div class="item">
-        <h2>mujairkonversi</h2>
-          <!-- Konten Informasi -->
-            <article>
+        <div class="item">
+            <p class="title">mujair<span class="bold">konversi</span></p>
+            <!-- Konten Informasi -->
+            <article id="infoArticle">
+                <p>Skala suhu Fahrenheit ditemukan oleh Daniel Gabriel Fahrenheit, seorang fisikawan Jerman, pada tahun 1724. Pada skala ini, titik beku air adalah 32° dan titik didih air adalah 212° pada tekanan atmosfer standar.</p>
+                
                 <p>Suhu <span class="formula s">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="formula s">S</span> dalam derajat Celsius (&deg;C) kali <span class="formula">9/5</span> tambah <span class="formula">32.</span></p>
 
                 <!-- Formula -->
@@ -30,16 +32,21 @@
                     <span class="s">S</span><sub>(&deg;F)</sub> = (<span class="s">S</span><sub>(&deg;C)</sub> x 1,8) + 32
                 </div>
             </article>
-      </div>
-      <div class="item">
-            <div class="section-item">
-                <label for="inputBox" id="inputLabel">Celcius (&deg;C):</label>
+        </div>
+        <div class="item">
+            <div class="section-item section-item-row">
+            <label for="inputBox" id="inputLabel">Celcius (&deg;C):</label>
+            <div class="button-group">
+                <button type="button" onclick="konversi()">Konversi</button>
+                <button type="button" onclick="rst()">Reset</button>
+                <button type="button" onclick="tukar()">Tukar</button>
+            </div>
             </div>
             <div class="section-item">
                 <textarea id="inputBox"></textarea>
             </div>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
         <div class="section-item">
             <label for="resultBox" id="resultLabel">Fahrenheit (&deg;F):</label>
         </div>
@@ -47,8 +54,8 @@
             <textarea id="resultBox" readonly></textarea>
         </div>
         </section>
-      </div>
-      <div class="item">
+        </div>
+        <div class="item">
         <div class="section-item">
                 <label for="detail">Cara Kalkulasi:</label>
             </div>
@@ -56,8 +63,12 @@
             <div class="section-item">
                 <textarea id="detail" readonly></textarea>
             </div>
-      </div>
-      <div class="item">navbar here</div>
+        </div>
+        <div class="item">
+            <p>Made by MujairKitten in 2025, with various (both human and artificial) sources.</p>
+        </div>
     </div>
 </body>
+<!-- JS External -->
+<script src="js/script.js"></script>
 </html>
