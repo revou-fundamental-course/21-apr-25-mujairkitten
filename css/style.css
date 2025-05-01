@@ -1,47 +1,102 @@
 body {
-    padding: 32px;
-    text-align: center;
-    font-family: Arial;
+  background: url("../assets/retro.png") center top;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 16px "Comfortaa";
+  color: white;
 }
 
-p, div {
-    text-align: justify;
+.grid {
+  width: 100%;
+  max-width: 95vw;
+  height: 95vh;
+  display: grid;
+  gap: 1vw;
+  padding: 1vw;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hero hero hero hero aside2 aside2 aside2 aside2"
+    "hero hero hero hero aside2 aside2 aside2 aside2"
+    "hero hero hero hero aside2 aside2 aside2 aside2"
+    "hero hero hero hero aside3 aside3 aside3 aside3"
+    "hero hero hero hero aside3 aside3 aside3 aside3"
+    "hero hero hero hero aside3 aside3 aside3 aside3"
+    "hero hero hero hero aside4 aside4 aside4 aside4"
+    "hero hero hero hero aside4 aside4 aside4 aside4"
+    "hero hero hero hero aside4 aside4 aside4 aside4"
+    "navbar navbar navbar navbar navbar navbar navbar navbar";
 }
 
-button {
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-
+.item {
+  padding: 2vh 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Center horizontally */
+  justify-content: center;  /* Center vertically */
+  text-align: center;       /* Center text */
+  height: 100%;             /* Fill grid area for vertical centering */
+  box-sizing: border-box;
+  background-color: #bd956d4d;
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px #af8965a2;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.bg-1 {
-    background-color: antiquewhite;
+.grid .item:nth-child(1) {
+  grid-area: hero;
+  align-items: flex-start;    /* Align children to the left */
+  justify-content: flex-start;/* Align children to the top */
+  text-align: left;           /* Align text to the left */
+}
+.grid .item:nth-child(2) {
+  grid-area: aside2;
 }
 
-.bg-2 {
-    background-color: lightblue;
+.grid .item:nth-child(3) {
+  grid-area: aside3;
+}
+.grid .item:nth-child(4) {
+  grid-area: aside4;
 }
 
-.bg-3 {
-    background-color: lightsalmon;
+.grid .item:nth-child(5) {
+  grid-area: navbar;
 }
 
 .section-item {
-    margin-bottom: 8px;
-    margin: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 8px 0;
 }
 
 textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
+  width: 90%;
+  min-width: 220px;
+  max-width: 100%;
+  height: 80px;
+  min-height: 45px;
+  max-height: 200px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #a59566;
+  border-radius: 12px;
+  background-color: #94764946;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px #af8965a2;
+  color: #ffffff;
+  font-size: 22px;
+  resize: vertical;
+  margin: 0 auto;
+  display: block;
+  resize: none;
 }
 
 .formula {
@@ -51,4 +106,125 @@ textarea {
 
 .s {
    font-style: italic;
+}
+
+.item h2 {
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  align-self: flex-start;    /* Place h2 at the start of the flex container */
+  margin-top: 0;            /* Remove extra top margin */
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 4px; /* Space between label and textarea */
+  margin-left: 5%;
+  text-align: left;
+}
+
+article {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: 1000;
+}
+
+button {
+  transition: 0.35s ease;
+  width: 80px;
+  height: 30px;
+  margin: 3px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #ECBA884d, #8E70524d);
+  box-shadow: 1px 1px 1px #B48E684d, -1.5px -1.5px 3px #C69C724d;
+  color: #fff;
+  font: 15px "Comfortaa";
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+button:hover {
+  background: linear-gradient(145deg, #8e7052a1, #ECBA88a1);
+  box-shadow: 1px 1px 10px #9273544d, -1px -1px 10px #E8B7864d;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-right: 2.5vw;
+}
+
+.section-item-row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-item-row label {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 950px) {
+  label {
+    font-size: 16px;
+  }
+  .button-group {
+  gap: 5px;
+}
+}
+
+@media screen and (max-width: 850px) {
+  .button-group {
+  gap: 3px;
+  margin-right: 10px;
+}
+button {
+  width: 60px;
+  height: 30px;
+  margin: 3px;
+  font: 12px "Comfortaa";
+}
+}
+
+@media screen and (max-width: 750px) {
+  .grid {
+    max-width: 85vw;
+    height: 90vh;
+    gap: 3vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "hero"
+    "hero"
+    "hero"
+    "aside2"
+    "aside2"
+    "aside2"
+    "aside3"
+    "aside3"
+    "aside3"
+    "aside4"
+    "aside4"
+    "aside4"
+    "navbar";
+  }
+  
+  article {
+    font-size: 16px;
+  }
+
+  button {
+  width: 80px;
+  height: 30px;
+  margin: 8px;
+  font: 15px "Comfortaa";
+}
 }

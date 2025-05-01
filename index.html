@@ -3,67 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Konversi Suhu - Sammy</title>
+    <title>Document</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Content -->
-    <header>
-        <h1>Website Konversi Suhu - Sammy (MujairKitten)</h1>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Introduction -->
-        <section>
-            <!-- Intro -->
-            <p>Masukkan suhu derajat Celsius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>
-        </section>
-
-        <!-- Form Konversi Suhu -->
-            <div class="section-item">
-                <label for="inputBox" id="inputLabel">Celcius (&deg;C):</label>
-            </div>
-            <div class="section-item">
-                <textarea id="inputBox"></textarea>
-            </div>
-
-            <!-- Tombol -->
-            <div class="section-item">
-                <button type="button" onclick="konversi()" class="bg-1">Konversi</button>
-                <button type="button" onclick="rst()" class="bg-2">Reset</button>
-                <button type="button" onclick="tukar()" class="bg-3">Tukar</button>
-            </div>
-
-        <!-- Hasil Konversi Suhu -->
-        <div class="section-item">
-            <label for="resultBox" id="resultLabel">Fahrenheit (&deg;F):</label>
-        </div>
-        <div class="section-item">
-            <textarea id="resultBox" readonly></textarea>
-        </div>
-        </section>
-
-        <!-- Penjelasan -->
-            <div class="section-item">
-                <label for="detail">Cara Kalkulasi:</label>
-            </div>
-
-            <div class="section-item">
-                <textarea id="detail" readonly></textarea>
-            </div>
-
-        <!-- Informasi Tambahan -->
-        <section>
-            <header>
-                <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
-            </header>
-
-            <hr />
-
+    <div class="grid">
+        <div class="item">
+            <p class="title">mujair<span class="bold">konversi</span></p>
             <!-- Konten Informasi -->
-            <article>
+            <article id="infoArticle">
+                <p>Skala suhu Fahrenheit ditemukan oleh Daniel Gabriel Fahrenheit, seorang fisikawan Jerman, pada tahun 1724. Pada skala ini, titik beku air adalah 32° dan titik didih air adalah 212° pada tekanan atmosfer standar.</p>
+                
                 <p>Suhu <span class="formula s">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="formula s">S</span> dalam derajat Celsius (&deg;C) kali <span class="formula">9/5</span> tambah <span class="formula">32.</span></p>
 
                 <!-- Formula -->
@@ -77,13 +32,42 @@
                     <span class="s">S</span><sub>(&deg;F)</sub> = (<span class="s">S</span><sub>(&deg;C)</sub> x 1,8) + 32
                 </div>
             </article>
+        </div>
+        <div class="item">
+            <div class="section-item section-item-row">
+            <label for="inputBox" id="inputLabel">Celcius (&deg;C):</label>
+            <div class="button-group">
+                <button type="button" onclick="konversi()">Konversi</button>
+                <button type="button" onclick="rst()">Reset</button>
+                <button type="button" onclick="tukar()">Tukar</button>
+            </div>
+            </div>
+            <div class="section-item">
+                <textarea id="inputBox"></textarea>
+            </div>
+        </div>
+        <div class="item">
+        <div class="section-item">
+            <label for="resultBox" id="resultLabel">Fahrenheit (&deg;F):</label>
+        </div>
+        <div class="section-item">
+            <textarea id="resultBox" readonly></textarea>
+        </div>
         </section>
-    </main>
+        </div>
+        <div class="item">
+        <div class="section-item">
+                <label for="detail">Cara Kalkulasi:</label>
+            </div>
 
-    <!-- Footer Content -->
-    <footer>
-        <p>&copy; 2025 Sammy. All rights reserved.</p>
-    </footer>
+            <div class="section-item">
+                <textarea id="detail" readonly></textarea>
+            </div>
+        </div>
+        <div class="item">
+            <p>Made by MujairKitten in 2025, with various (both human and artificial) sources.</p>
+        </div>
+    </div>
 </body>
 <!-- JS External -->
 <script src="js/script.js"></script>
