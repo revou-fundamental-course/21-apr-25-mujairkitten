@@ -41,12 +41,11 @@ body {
   height: 100%;             /* Fill grid area for vertical centering */
   box-sizing: border-box;
   background-color: #bd956d4d;
-  border-radius: 30px;
+  border-radius: 25px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px #af8965a2;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
 }
 
 .grid .item:nth-child(1) {
@@ -87,9 +86,11 @@ textarea {
   max-height: 200px;
   padding: 8px 12px;
   box-sizing: border-box;
-  border: 2px solid #4b3e13;
-  border-radius: 8px;
-  background-color: #947649;
+  border: 1px solid #a59566;
+  border-radius: 12px;
+  background-color: #94764946;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px #af8965a2;
   color: #ffffff;
   font-size: 22px;
   resize: vertical;
@@ -118,8 +119,12 @@ textarea {
 label {
   font-size: 20px;
   margin-bottom: 4px; /* Space between label and textarea */
-  margin-left: 0;
+  margin-left: 5%;
   text-align: left;
+}
+
+article {
+  font-size: 18px;
 }
 
 .title {
@@ -132,9 +137,9 @@ label {
 
 button {
   transition: 0.35s ease;
-  width: 100px;
+  width: 80px;
   height: 30px;
-  margin: 8px;
+  margin: 3px;
   border: none;
   border-radius: 5px;
   background: linear-gradient(145deg, #ECBA884d, #8E70524d);
@@ -149,6 +154,12 @@ button:hover {
   background: linear-gradient(145deg, #8e7052a1, #ECBA88a1);
   box-shadow: 1px 1px 10px #9273544d, -1px -1px 10px #E8B7864d;
 }
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-right: 2.5vw;
+}
 
 .section-item-row {
   flex-direction: row;
@@ -162,13 +173,29 @@ button:hover {
   margin-bottom: 0;
 }
 
-.button-group {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
+@media screen and (max-width: 950px) {
+  label {
+    font-size: 16px;
+  }
+  .button-group {
+  gap: 5px;
+}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
+  .button-group {
+  gap: 3px;
+  margin-right: 10px;
+}
+button {
+  width: 60px;
+  height: 30px;
+  margin: 3px;
+  font: 12px "Comfortaa";
+}
+}
+
+@media screen and (max-width: 750px) {
   .grid {
     max-width: 85vw;
     height: 90vh;
@@ -189,4 +216,15 @@ button:hover {
     "aside4"
     "navbar";
   }
+  
+  article {
+    font-size: 16px;
+  }
+
+  button {
+  width: 80px;
+  height: 30px;
+  margin: 8px;
+  font: 15px "Comfortaa";
+}
 }
