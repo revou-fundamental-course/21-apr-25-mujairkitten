@@ -1,5 +1,5 @@
 body {
-  background: url("../assets/retro.png") center top;
+  background: #000 url("../assets/retro.png") center top;
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -16,8 +16,15 @@ body {
   display: grid;
   gap: 1vw;
   padding: 1vw;
+  /* Define an 8-column grid layout for the main grid container, 
+     where each column has an equal width using 1fr (fractional unit). */
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: auto;
+  /* Layout structure:
+     - "hero": Main content area spanning the left side.
+     - "aside2": Secondary content area on the top-right.
+     - "aside3": Secondary content area in the middle-right.
+     - "aside4": Secondary content area on the bottom-right.
+     - "navbar": Navigation bar at the bottom. */
   grid-template-areas:
     "hero hero hero hero aside2 aside2 aside2 aside2"
     "hero hero hero hero aside2 aside2 aside2 aside2"
@@ -93,7 +100,6 @@ textarea {
   box-shadow: 0 0 10px #af8965a2;
   color: #ffffff;
   font-size: 22px;
-  resize: vertical;
   margin: 0 auto;
   display: block;
   resize: none;
@@ -132,7 +138,7 @@ article {
 }
 
 .bold {
-  font-weight: 1000;
+  font-weight: bold;
 }
 
 button {
@@ -142,6 +148,7 @@ button {
   margin: 3px;
   border: none;
   border-radius: 5px;
+  /* Creates a soft gradient effect for the button background to enhance its visual appeal */
   background: linear-gradient(145deg, #ECBA884d, #8E70524d);
   box-shadow: 1px 1px 1px #B48E684d, -1.5px -1.5px 3px #C69C724d;
   color: #fff;

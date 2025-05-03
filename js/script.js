@@ -1,7 +1,3 @@
-// Get references to result and detail elements (not used directly in this script)
-const far = document.getElementById('result')
-const det = document.getElementById('detail')
-
 // Variables to store result and detail text (not used directly)
 let result = ''
 let detail = ''
@@ -20,7 +16,6 @@ function updateUI() {
         // If converting from Celsius to Fahrenheit
         inputLabel.textContent = 'Celcius (°C):';
         resultLabel.textContent = 'Fahrenheit (°F):';
-        inputBox.value = '';
         resultBox.value = '';
         det.value = '';
         inputBox.placeholder = 'Masukkan suhu Celsius';
@@ -43,7 +38,6 @@ function updateUI() {
         // If converting from Fahrenheit to Celsius
         inputLabel.textContent = 'Fahrenheit (°F):';
         resultLabel.textContent = 'Celcius (°C):';
-        inputBox.value = '';
         resultBox.value = '';
         det.value = '';
         inputBox.placeholder = 'Masukkan suhu Fahrenheit';
@@ -104,6 +98,12 @@ function rst() {
 function tukar() {
     isCtoF = !isCtoF; // Toggle the conversion direction
     updateUI();       // Update the UI to match the new direction
+
+    // After updating UI, if inputBox has value, perform conversion
+    const inputBox = document.getElementById('inputBox');
+    if (inputBox.value.trim() !== '') {
+        konversi();
+    }
 }
 
 // Initialize the UI when the page loads
